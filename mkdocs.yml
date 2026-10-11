@@ -1,0 +1,64 @@
+site_name: Algorithm Notes
+site_description: 刷题与算法学习笔记
+# 上线后把下面这行改成你的真实地址，例如 https://你的用户名.github.io/algorithm-note/
+site_url: https://yush1jing.github.io/Algorithm-note/
+
+theme:
+  name: material
+  language: zh
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到浅色模式
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - toc.follow
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - 首页: index.md
+  - 刷题方法: method.md
+  - 数据结构:
+      - data-structures/index.md
+  - 算法套路:
+      - patterns/index.md
+  - 刷题记录:
+      - problems/index.md
+      - 0001 Two Sum: problems/0001-two-sum.md
+      - 笔记模板: problems/template.md
+  - 错题本: mistakes.md
