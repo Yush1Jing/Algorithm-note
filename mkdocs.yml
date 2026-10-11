@@ -1,64 +1,125 @@
+# Project information
 site_name: Algorithm Notes
-site_description: 刷题与算法学习笔记
-# 上线后把下面这行改成你的真实地址，例如 https://你的用户名.github.io/algorithm-note/
 site_url: https://yush1jing.github.io/Algorithm-note/
+site_author: Yush1Jing
+site_description: 数据结构与算法学习笔记：套路、模板与刷题复盘
+
+# Repository
+repo_name: Yush1Jing/Algorithm-note
+repo_url: https://github.com/Yush1Jing/Algorithm-note
+edit_uri: edit/main/docs/
+
+copyright: Copyright &copy; 2026 Yush1Jing
 
 theme:
   name: material
+  custom_dir: overrides
   language: zh
-  palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/weather-night
-        name: 切换到深色模式
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/weather-sunny
-        name: 切换到浅色模式
+  font:
+    text: Noto Sans SC
+    code: JetBrains Mono
   features:
-    - navigation.tabs
-    - navigation.sections
-    - navigation.top
-    - navigation.indexes
-    - search.highlight
-    - search.suggest
+    - content.action.edit
+    - content.code.annotate
     - content.code.copy
+    - content.tabs.link
+    - content.tooltips
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
     - toc.follow
+  palette:
+    - scheme: default
+      primary: white
+      accent: teal
+      toggle:
+        icon: material/theme-light-dark
+        name: 深色模式
+    - scheme: slate
+      primary: black
+      accent: teal
+      toggle:
+        icon: material/theme-light-dark
+        name: 浅色模式
+  icon:
+    logo: material/book-open-page-variant
+    repo: fontawesome/brands/github
+    edit: fontawesome/regular/pen-to-square
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Yush1Jing
+  generator: false
+  status:
+    new: 最近添加
 
 plugins:
   - search:
       lang:
         - zh
         - en
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: none
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: false
+      auto_caption: false
 
 markdown_extensions:
+  - abbr
   - admonition
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.tasklist:
-      custom_checkbox: true
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
   - tables
   - toc:
       permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js
+
+extra_css:
+  - stylesheets/extra.css
 
 nav:
-  - 首页: index.md
-  - 刷题方法: method.md
-  - 数据结构:
+  - 前言:
+      - index.md
+      - 0.1 刷题方法: method.md
+  - 第 1 章 数据结构:
       - data-structures/index.md
-  - 算法套路:
+  - 第 2 章 算法套路:
       - patterns/index.md
-  - 刷题记录:
+  - 第 3 章 刷题记录:
       - problems/index.md
-      - 0001 Two Sum: problems/0001-two-sum.md
-      - 笔记模板: problems/template.md
+      - 3.1 Two Sum: problems/0001-two-sum.md
+      - 3.2 笔记模板: problems/template.md
   - 错题本: mistakes.md
