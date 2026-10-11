@@ -1,3 +1,9 @@
+# 笔记模板
+
+复制本页内容到 `docs/03-problems/题号-英文名.md`，再在 `mkdocs.yml` 的 nav 里加一行。
+
+---
+
 # 3.x &nbsp; 题目名
 
 !!! question

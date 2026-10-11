@@ -111,15 +111,18 @@ extra_css:
   - stylesheets/extra.css
 
 nav:
-  - 前言:
-      - index.md
-      - 0.1 刷题方法: method.md
+  - 首页: index.md
+  - 第 0 章 前言:
+      - 00-preface/index.md
+      - 0.1 刷题方法: 00-preface/method.md
   - 第 1 章 数据结构:
-      - data-structures/index.md
+      - 01-data-structures/index.md
   - 第 2 章 算法套路:
-      - patterns/index.md
+      - 02-patterns/index.md
   - 第 3 章 刷题记录:
-      - problems/index.md
-      - 3.1 Two Sum: problems/0001-two-sum.md
-      - 3.2 笔记模板: problems/template.md
-  - 错题本: mistakes.md
+      - 03-problems/index.md
+      - 3.1 Two Sum: 03-problems/0001-two-sum.md
+  - 第 4 章 错题本:
+      - 04-mistakes/index.md
+  - 附录:
+      - 笔记模板: appendix/template.md

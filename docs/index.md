@@ -6,11 +6,11 @@
 
 | 栏目 | 内容 |
 |---|---|
-| [刷题方法](method.md) | 知识点清单、题库路线、每道题的标准面试动作 |
-| [数据结构](data-structures/index.md) | 每种结构能做什么、操作复杂度、Python 写法 |
-| [算法套路](patterns/index.md) | 双指针、BFS、二分、DP 等模板和识别信号 |
-| [刷题记录](problems/index.md) | 一题一页：暴力解 → 瓶颈 → 优化 |
-| [错题本](mistakes.md) | 卡过的点，定期重做 |
+| [刷题方法](00-preface/method.md) | 知识点清单、题库路线、每道题的标准面试动作 |
+| [数据结构](01-data-structures/index.md) | 每种结构能做什么、操作复杂度、Python 写法 |
+| [算法套路](02-patterns/index.md) | 双指针、BFS、二分、DP 等模板和识别信号 |
+| [刷题记录](03-problems/index.md) | 一题一页：暴力解 → 瓶颈 → 优化 |
+| [错题本](04-mistakes/index.md) | 卡过的点，定期重做 |
 
 ## 学习原则
 
