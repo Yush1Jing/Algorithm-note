@@ -1,0 +1,104 @@
+/* ---------- 颜色：浅色 ---------- */
+:root > * {
+  --md-primary-fg-color: #ffffff;
+  --md-primary-bg-color: #1d1d20;
+  --md-default-fg-color: #1d1d20;
+  --md-default-bg-color: #ffffff;
+  --md-typeset-color: #1d1d20;
+  --md-typeset-a-color: #2f8f86;
+  --md-accent-fg-color: #8a8a8a;
+  --md-code-fg-color: #1d1d20;
+  --md-code-bg-color: #f5f5f5;
+  --header-glass: rgba(255, 255, 255, 0.65);
+  --btn-color: #4fa79e;
+  --btn-hover-color: #5bb8ae;
+}
+
+/* ---------- 颜色：深色 ---------- */
+[data-md-color-scheme="slate"] {
+  --dark-base: #1e1e1e;
+  --dark-mantle: #1a1a1a;
+  --dark-crust: #161616;
+  --md-primary-fg-color: var(--dark-base);
+  --md-primary-bg-color: #b4bec9;
+  --md-default-fg-color: #b4bec9;
+  --md-default-bg-color: var(--dark-base);
+  --md-typeset-color: #b4bec9;
+  --md-typeset-a-color: #56bdb3;
+  --md-accent-fg-color: #a8a8a8;
+  --md-code-fg-color: #b4bec9;
+  --md-code-bg-color: var(--dark-crust);
+  --md-footer-fg-color: #b4bec9;
+  --md-footer-bg-color: var(--dark-mantle);
+  --header-glass: rgba(26, 26, 26, 0.8);
+}
+
+/* ---------- 毛玻璃顶栏 ---------- */
+.md-header,
+.md-header--shadow {
+  background-color: var(--header-glass);
+  color: var(--md-default-fg-color);
+  box-shadow: none;
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+/* 深色页脚 */
+[data-md-color-scheme="slate"] .md-footer,
+[data-md-color-scheme="slate"] .md-footer__inner { background-color: var(--dark-mantle); }
+[data-md-color-scheme="slate"] .md-footer-meta,
+[data-md-color-scheme="slate"] .md-footer__link { background-color: var(--dark-crust); }
+[data-md-color-scheme="slate"] .md-footer__link:hover { background-color: var(--dark-base); }
+
+/* 侧边栏分组标题保持正文色 */
+.md-nav__link[for] { color: var(--md-default-fg-color) !important; }
+
+/* ---------- 排版 ---------- */
+body {
+  --md-text-font-family: -apple-system, BlinkMacSystemFont, var(--md-text-font, _), "PingFang SC", Helvetica, Arial, sans-serif;
+  --md-code-font-family: var(--md-code-font, _), SFMono-Regular, Menlo, Consolas, monospace;
+}
+.md-typeset { font-size: 0.75rem; line-height: 1.6; }
+.md-typeset h1 { font-weight: 400; color: var(--md-default-fg-color); }
+.md-typeset h2 { font-weight: 400; }
+.md-typeset h3 { font-weight: 500; }
+.md-typeset a:hover { color: var(--md-typeset-a-color); text-decoration: underline; }
+.md-typeset code { border-radius: 0.2rem; }
+.md-typeset pre { font-size: 0.95em; }
+.md-typeset pre > code { max-height: 25rem; }
+
+/* 代码标签页（Python / Java / C++ …） */
+.md-typeset .tabbed-labels > label { font-size: 0.62rem; }
+
+/* 提示框聚焦阴影 */
+.md-typeset .admonition:focus-within,
+.md-typeset details:focus-within { box-shadow: var(--md-shadow-z1); }
+
+/* 深色模式下图片不刺眼 */
+[data-md-color-scheme="slate"] .md-typeset img,
+[data-md-color-scheme="slate"] .md-typeset svg { filter: brightness(0.85) invert(0.05); }
+
+/* 图片：圆角 + 阴影 + 居中 */
+.md-typeset img.figure {
+  display: block;
+  margin: 0 auto;
+  border-radius: 0.3rem;
+  box-shadow: var(--md-shadow-z2);
+}
+
+/* 表格居中：<div class="center-table" markdown> ... </div> */
+.center-table { text-align: center; }
+.md-typeset .center-table :is(td, th):not([align]) { text-align: initial; }
+
+/* 圆角按钮：[文字](链接){ .rounded-button } */
+.md-typeset .rounded-button {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 10em;
+  padding: 0.5em 1.3em;
+  margin: 0 0.15em;
+  background-color: var(--btn-color);
+  color: #fff !important;
+  text-decoration: none !important;
+}
+.md-typeset .rounded-button:hover { background-color: var(--btn-hover-color); }
